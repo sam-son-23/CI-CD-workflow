@@ -1,0 +1,16 @@
+name: Show Commit Message
+on:
+  push:
+    branches:
+    - main
+
+jobs:
+  print-message:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v6
+
+    - name: Print commit Message
+      run: echo "Commit Message" echo "${{github.event.head_commit.message}}"
