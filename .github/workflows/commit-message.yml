@@ -3,7 +3,8 @@ on:
   push:
     branches:
     - main
-    - mastesr
+    - master
+
 jobs:
   print-message:
     runs-on: ubuntu-latest
