@@ -1,0 +1,23 @@
+name: Show commit message
+on:
+  push:
+    branches:
+    - main
+    - master
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v5
+
+    - name: Set up node js Environment
+      uses: actions/setup-node@v6
+
+    - name: Install Dependencies
+      run: npm Install
+
+    - name: Run Tests
+      run: npm test
